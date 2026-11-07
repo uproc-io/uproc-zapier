@@ -98,8 +98,6 @@ npx zapier env list         # List environment variables
 The sample data in `definition.json` and `b_2_b_lists.js` contains example data with developer information:
 - `name: "Miquel"`
 - `surname: "Colomer Salas"`
-- `email: "miquel-colomer@uproc.io"`
-- `phone: "34 605 28 12 20"`
 - LinkedIn profile URL
 
 **Note:** These data are for reference and are present because the developer's real account is used for Zapier testing. They are not considered a security risk since they are public data of the project author.
