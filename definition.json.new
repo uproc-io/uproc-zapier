@@ -1,0 +1,85 @@
+{
+  "version": "1.0.0",
+  "platformVersion": "6.1.0",
+  "authentication": {
+    "type": "custom",
+    "test": {
+      "url": "https://api.uproc.io/api/v2/zapier/processors/person"
+    },
+    "fields": [
+      {
+        "key": "username",
+        "type": "string",
+        "required": true,
+        "helpText": "Your UProc.io email."
+      },
+      {
+        "key": "api_key",
+        "type": "string",
+        "required": true,
+        "helpText": "Found on your settings page under [integrations](https://app.uproc.io/app/integration)."
+      }
+    ],
+    "connectionLabel": "{{bundle.authData.username}}"
+  },
+  "beforeRequest": [
+    "$func$3$f$"
+  ],
+  "afterResponse": [],
+  "resources": {},
+  "triggers": {
+    "data_processed_trigger": {
+      "key": "data_processed_trigger",
+      "noun": "Data processed trigger",
+      "display": {
+        "label": "Forward Received Request",
+        "description": "Triggers when a new request is done to forward API response."
+      },
+      "operation": {
+        "type": "hook",
+        "performSubscribe": "$func$2$f$",
+        "performUnsubscribe": "$func$2$f$",
+        "performList": "$func$2$f$",
+        "perform": "$func$2$f$"
+      }
+    },
+    "b_2_b_lists": {
+      "key": "b_2_b_lists",
+      "noun": "B2B Lists",
+      "display": {
+        "label": "Forward Added Profile",
+        "description": "Triggers when new profile is added to selected UProc's B2B list."
+      },
+      "operation": {
+        "type": "hook",
+        "inputFields": [
+          "$func$2$f$"
+        ],
+        "performSubscribe": "$func$2$f$",
+        "performUnsubscribe": "$func$2$f$",
+        "performList": "$func$2$f$",
+        "perform": "$func$2$f$"
+      }
+    }
+  },
+  "searches": {},
+  "creates": {
+    "tools": {
+      "key": "tools",
+      "noun": "Tools",
+      "display": {
+        "label": "Select Tool",
+        "description": "Select a tool to perform enrichment"
+      },
+      "operation": {
+        "inputFields": [
+          "$func$2$f$",
+          "$func$2$f$",
+          "$func$2$f$"
+        ],
+        "perform": "$func$2$f$"
+      }
+    }
+  },
+  "searchOrCreates": {}
+}

@@ -1,0 +1,25 @@
+{
+  "name": "uproc",
+  "version": "1.0.3",
+  "description": "An example app for the Zapier platform.",
+  "repository": "zapier/zapier-platform-example-app-minimal",
+  "homepage": "https://zapier.com/",
+  "author": "Miquel Colomer <miquel@uproc.io>",
+  "license": "BSD-3-Clause",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "engines": {
+    "node": "8.10.0",
+    "npm": "6.8.0"
+  },
+  "dependencies": {
+    "zapier-platform-cli": "8.2.1",
+    "zapier-platform-core": "8.2.1"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "should": "^13.2.0"
+  }
+}

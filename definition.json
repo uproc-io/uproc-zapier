@@ -1,0 +1,209 @@
+{
+  "version": "1.0.3",
+  "platformVersion": "8.2.1",
+  "authentication": {
+    "type": "custom",
+    "test": {
+      "url": "https://api.uproc.io/api/v2/zapier/processors/person"
+    },
+    "fields": [
+      {
+        "key": "username",
+        "type": "string",
+        "required": true,
+        "label": "Email"
+      },
+      {
+        "key": "api_key",
+        "type": "string",
+        "required": true,
+        "label": "Api Real Key",
+        "helpText": "Found on your settings page under [integrations](https://app.uproc.io/app/integration)."
+      }
+    ],
+    "connectionLabel": "{{bundle.authData.username}}"
+  },
+  "beforeRequest": [
+    "$func$3$f$"
+  ],
+  "afterResponse": [],
+  "resources": {},
+  "triggers": {
+    "b_2_b_lists": {
+      "key": "b_2_b_lists",
+      "noun": "B2B Lists",
+      "display": {
+        "label": "New Profile Added to List",
+        "description": "Triggers when new B2B profile is added to selected UProc's list."
+      },
+      "operation": {
+        "type": "hook",
+        "inputFields": [
+          "$func$2$f$"
+        ],
+        "performSubscribe": "$func$2$f$",
+        "performUnsubscribe": "$func$2$f$",
+        "performList": "$func$2$f$",
+        "perform": "$func$2$f$",
+        "sample": {
+          "person": {
+            "name": "Miquel",
+            "surname": "Colomer Salas",
+            "gender": "male",
+            "email": "miquel-colomer@uproc.io",
+            "email_confidence": "verified",
+            "email_score": 99,
+            "profile": "https://www.linkedin.com/in/miquelcolomersalas/",
+            "area": "ceo",
+            "seniority": "executive",
+            "role": "Founder & Ceo @ Uproc"
+          },
+          "company_general": {
+            "name": "Miquel",
+            "description": ""
+          },
+          "company_contact": {
+            "phone": "34 605 28 12 20",
+            "email": "hello@uproc.io",
+            "website": "http://uproc.io",
+            "address": "",
+            "zipcode": "",
+            "city": "",
+            "state": "",
+            "county": "",
+            "country": ""
+          },
+          "company_financial": {
+            "industry": "",
+            "revenue": "",
+            "size": ""
+          },
+          "company_social": {
+            "instagram": "",
+            "linkedin": "",
+            "facebook": "https://facebook.com/uprocdataquality",
+            "google": "",
+            "twitter": "https://twitter.com/uproc_io",
+            "klout": "",
+            "foursquare": "",
+            "pinterest": "",
+            "slideshare": "",
+            "github": "",
+            "youtube": "https://www.youtube.com/channel/UCOUlLZwMY-J0s_HfyPxrI5A",
+            "flickr": "",
+            "aboutme": "",
+            "angellist": ""
+          },
+          "company_technologies": {
+            "result": "addtoany,cloudflare,facebook,font awesome,google analytics,google font api,jquery,php,twitter emoji (twemoji),wordpress,yoast seo"
+          }
+        }
+      }
+    },
+    "web_lists": {
+      "key": "web_lists",
+      "noun": "Web Lists",
+      "display": {
+        "label": "New Webtrack Added to List",
+        "description": "Triggers when new Webtrack is added to selected UProc's Web list."
+      },
+      "operation": {
+        "type": "hook",
+        "inputFields": [
+          "$func$2$f$"
+        ],
+        "performSubscribe": "$func$2$f$",
+        "performUnsubscribe": "$func$2$f$",
+        "performList": "$func$2$f$",
+        "perform": "$func$2$f$",
+        "sample": {
+          "input": {
+            "ip": "140.82.118.3",
+            "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36",
+            "page": "/",
+            "list": "5d5f876c066c042fcfbbff87",
+            "is_new": false,
+            "site": "localhost"
+          },
+          "output": {
+            "geographical": {
+              "country": "United States",
+              "city": "San Francisco",
+              "county": "California",
+              "latitude": 37.7757,
+              "longitude": -122.3952,
+              "zipcode": "94107"
+            },
+            "locale": {
+              "currency_code": "USD",
+              "currency_name": "US DOLLAR",
+              "language_code": "chr_US",
+              "language_name": "Cherokee (United States)"
+            },
+            "timezone": {
+              "zone": "America/Los_Angeles",
+              "datetime": "2019-08-23 00:46:46",
+              "date": "2019-08-23",
+              "year": "2019",
+              "month": "08",
+              "day": "23",
+              "hour": "00",
+              "minute": "46",
+              "quarter": "3",
+              "weekday": "Friday"
+            },
+            "network": {
+              "hostname": "lb-140-82-118-3-ams.github.com",
+              "range": "140.82.112.0-140.82.127.255",
+              "provider": "githu",
+              "is_static": true
+            },
+            "reputation": {
+              "is_proxy": false,
+              "is_tor": false,
+              "is_blacklisted": false
+            },
+            "company": {
+              "name": "Github",
+              "address": "Colin P Kelly Junior Street, 88",
+              "zipcode": "94107",
+              "city": "San Francisco",
+              "state": "California",
+              "country": "United States",
+              "email": "",
+              "website": "http://github.com",
+              "phone": "+1 877-448-4820"
+            }
+          },
+          "stats": {
+            "unique": 0,
+            "total": 2,
+            "last_visit": "2019-08-23T07:57:09.969Z",
+            "previous_visit": null
+          },
+          "date": "2019-08-23T07:46:46.974Z"
+        }
+      }
+    }
+  },
+  "searches": {},
+  "creates": {
+    "tools": {
+      "key": "tools",
+      "noun": "Tools",
+      "display": {
+        "label": "Select Tool",
+        "description": "Select a tool to perform verification or enrichment"
+      },
+      "operation": {
+        "inputFields": [
+          "$func$2$f$",
+          "$func$2$f$",
+          "$func$2$f$"
+        ],
+        "perform": "$func$2$f$"
+      }
+    }
+  },
+  "searchOrCreates": {}
+}
