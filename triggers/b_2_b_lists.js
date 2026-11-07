@@ -1,25 +1,25 @@
 const API_URL = "https://api.uproc.io/api/v2";
 const sample_data_hook = {
   "person": {
-    "name": "Miquel",
-    "surname": "Colomer Salas",
+    "name": "Sample",
+    "surname": "User",
     "gender": "male",
-    "email": "miquel-colomer@uproc.io",
+    "email": "test@uproc.io",
     "email_confidence": "verified",
-    "email_score": 99,
-    "profile": "https://www.linkedin.com/in/miquelcolomersalas/",
+    "email_score": 95,
+    "profile": "https://www.linkedin.com/in/sample-user",
     "area": "ceo",
     "seniority": "executive",
-    "role": "Founder & Ceo @ Uproc"
+    "role": "Founder @ Uproc"
   },
   "company_general": {
-    "name": "Miquel",
+    "name": "Sample Company",
     "description": ""
   },
   "company_contact": {
-    "phone": "34 605 28 12 20",
+    "phone": "+34 600 000 000",
     "email": "hello@uproc.io",
-    "website": "http://uproc.io",
+    "website": "https://uproc.io",
     "address": "",
     "zipcode": "",
     "city": "",
